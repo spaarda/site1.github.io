@@ -4,9 +4,26 @@
 	background-image: url(../img/hero-bg.png)
 	background-repeat: no-repeat
 	background-size: cover
-	height: 100vh
 	width: 100%
 	position: relative
+
+.logo
+	font-size: 18px
+	font-weight: 700
+	text-transform: uppercase
+	color: #60606e
+
+.menu
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	&__link
+		display: block
+		color: #9a9a9a
+		text-transform: uppercase
+		text-decoration: none
 
 .nav
 	background-color: transparent 
@@ -19,63 +36,81 @@
 		display: flex
 		flex-direction: row
 		justify-content: space-between
+		align-items: center
+		
+.top-menu
+	&__list
+		display: none
+	&__blockicon
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		box-shadow: 0 0px 15px rgba(0,0,0,0.2)
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		text-decoration: none 
 	&__icon
-		&-1
-			width: 31px
-			height: 1px
-			background-color: #60606e
-			margin-bottom: 6px
-		&-2
-			width: 15px
-			height: 1px
-			background-color: #60606e
-			margin-bottom: 6px
-		&-3
+		display: block
+		margin-left: 10px
+		width: 15px
+		height: 1px
+		background-color: #60606e
+		&:after
+			content: ''
+			display: block
 			width: 23px
 			height: 1px
+			margin-top: 12px
+			background-color: #60606e
+		&:before
+			content: ''
+			display: block
+			width: 31px
+			height: 1px
+			margin-top: -6px
 			background-color: #60606e
 
-.logo
-	font-size: 18px
-	font-weight: 700
-	text-transform: uppercase
-	color: #60606e
-
 .hero
+	width: 100%
 	&__wrap
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translateX(-50%) translateY(-100%)
+		width: 100%
+	&__blocktitle
+		margin: 0 auto
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
 		display: -o-flex
 		display: flex
 		flex-direction: column
-		align-items: center
-		
+		// justify-content: center
 	&__item
-		padding: 8px 18px
+		margin: 0 auto
+		margin-top: 160px
+		color: $greycolor
 		background-color: $greencolor
+		padding: 10px 21px 7px
 		font-size: 18px
 		font-weight: 700
 		text-transform: uppercase
-		color: $greycolor
-		display: inline-block
+		display: block
 	&__title
-		margin: 0
-		display: inline-block
+		margin: 0 auto
+		display: block
 		border: 10px solid $greycolor
 		padding: 22px 35px
 		color: $greycolor
 		font-size: 48px
 		text-transform: uppercase
 		font-weight: 700
-		display: inline-block
 		margin-bottom: 30px
+		white-space: nowrap
 	&__subtitle
-		margin: 0
+		margin: 0 auto
+		display: block
 		color: $greycolor
 		font-weight: 400
 		font-size: 16px
@@ -83,28 +118,35 @@
 		text-align: center
 
 .history
-	margin-top: 55vh
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
-	flex-direction: row
-	justify-content: center
+	display: block
+	width: 100%
+	&__wrap
+		margin: auto
+		margin-top: 155px
+		width: 100%
 	&__item
-		margin-right: 120px
+		margin-right: 5%
+		max-width: 458px
+		width: 45%
+		float: left
+		display: inline-block
 	&__img
-		width: 458px
-		height: 400px
+		width: 100%
+		height: 100%
 	&__content
+		display: inline-block
+		max-width: 300px
+		width: 45%
+		margin: auto
 		max-width: 558px
 	&__title
 		margin: 29px 0 28px 0
 		font-size: 30px
-		font-weight: 700
+		font-weight: 900
 		text-transform: uppercase
 		color: $greycolor
 		position: relative
+		z-index: 1
 		&:before
 			content: ''
 			display: block
@@ -120,7 +162,6 @@
 		font-weight: 400
 		color: $greycolor
 		line-height: 30px
-		font-family: "Open Sans"
 	&__btn
 		display: -webkit-flex
 		display: -moz-flex
@@ -136,3 +177,358 @@
 		padding: 20px 39px 19px
 		border: none
 		background-color: $greencolor
+
+.section
+	text-align: center
+	&__titleblock
+		width: 100%
+		margin: 0 auto
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__subtitle
+		font-size: 14px
+		font-weight: 400
+		color: $greycolor
+		display: block
+		margin: 0 auto
+		max-width: 717px
+	&__title
+		margin: 0
+		margin-bottom: 29px
+		font-size: 30px
+		color: $greycolor
+		font-weight: 900
+		text-transform: uppercase
+		position: relative
+		display: inline-block
+		&:after
+			content: ''
+			display: block
+			width: 68px
+			height: 21px
+			position: absolute
+			top: 50%
+			left: 0
+			z-index: -1
+			background-color: $greencolor
+
+.whychoose
+	width: 100%
+	margin: 0 auto
+	&__row
+		width: 100%
+		margin: 0 auto
+	&__title
+		margin: 120px auto 20px
+	&__content
+		width: 100%
+		margin-top: 100px
+		position: relative
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: flex-end
+		flex-wrap: wrap-reverse
+	&__link
+		text-decoration: none
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
+		color: #999999
+	&__li
+		margin-bottom: 15px
+	&__itemimg
+		margin: 0 auto
+		margin-bottom: 20px
+	&__item
+		margin: 0 auto
+		text-align: left
+		max-width: 600px
+		width: 100%
+		display: inline-block
+		&:last-child
+			margin-left: 70px
+	&__itemtitle
+		margin: 0
+		margin-bottom: 28px
+		font-size: 18px
+		font-weight: 700
+		text-transform: uppercase
+		color: $greycolor
+	&__list
+		margin-top: 0
+		list-style: none
+		margin-bottom: 60px
+		display: inline-block
+		padding-left: 0
+		&:nth-child(odd)
+			margin-right: 80px
+			margin-left: 45px
+
+	&__before1
+		&:before
+			content: url('../img/whychoose-icon1.png')
+			display: block
+			width: 28px
+			height: 28px
+			margin-bottom: 21px
+	&__before2
+		&:before
+			content: url('../img/whychoose-icon2.png')
+			display: block
+			width: 28px
+			height: 28px
+			margin-bottom: 19px
+	&__before3
+		margin-right: 60px
+		&:before
+			content: url('../img/whychoose-icon3.png')
+			display: block
+			width: 28px
+			height: 28px
+			margin-bottom: 19px
+	&__before4
+		&:before
+			content: url('../img/whychoose-icon4.png')
+			display: block
+			width: 28px
+			height: 28px
+			margin-bottom: 21px
+
+.portfolio
+	&__title
+		margin-top: 150px
+	&__subtitle
+		margin-bottom: 100px
+	&__content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+
+.category
+	width: 100%
+	max-width: 200px
+	text-align: left
+	margin-top: 15px
+	&__title
+		margin: 0
+		margin-bottom: 40px
+		font-size: 30px
+		font-weight: 700
+		text-transform: uppercase
+		color: $greycolor
+	&__listbtn
+		border: none
+		background-color: transparent
+		font-size: 14px
+		font-weight: 700
+		color: $greycolor
+		text-transform: uppercase
+		font-family: Montserrat
+		&:focus
+			outline: none
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
+		&-active
+			background-color: $greencolor
+			padding: 10px 20px
+			color: #ffffff
+			margin-left: -20px
+	&__li
+		text-align: left
+		margin-bottom: 25px
+	&__content
+		width: 100%
+		max-width: 940px
+		max-height: 1200px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-flow: column wrap
+		overflow: hidden
+	&__item
+		margin: 15px
+		&:nth-child(3n+1)  
+			order: 1
+		&:nth-child(3n+2) 
+			order: 2
+		&:nth-child(3n)   
+			order: 3
+
+.newsletter
+	width: 100%
+	background-color: $greencolor
+	&__wrap
+		padding-top: 50px
+	&__blocktitle
+		display: inline-block 
+		vertical-align: top
+		max-width: 490px
+		width: 45%
+	&__title
+		color: #fff
+		font-size: 30px
+		font-weight: 700
+		margin: 0
+		margin-bottom: 29px
+		text-transform: uppercase
+	&__btn
+		background-color: #fff
+		color: $greencolor
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		border: none
+		padding: 22px 32px 18px
+		margin-bottom: 25px
+	&__formitem
+		display: inline-block
+		max-width: 560px
+		width: 51%
+		margin-bottom: 50px
+		background-color: #fff
+		padding: 20px 50px 20px 25px
+	&__formtitle
+		margin: 0
+		margin-bottom: 18px
+		font-size: 24px
+		font-weight: 700
+		text-transform: uppercase
+		color: $greycolor
+	&__formsubtitle
+		font-size: 16px
+		font-weight: 400
+		color: #999999
+	&__form
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+		align-items: center
+		margin: 29px auto 0
+		&-email
+			display: block
+			width: 80%
+			height: 50px
+			max-height: 50px
+			color: #cdcdcd
+			font-size: 12px
+			font-weight: 700
+			text-transform: uppercase
+			border: 1px solid rgba(0, 0, 0, 0.3)
+			border-right: none
+			margin: 0
+			padding-left: 20px
+			opacity: 0.5
+		&-submit
+			display: block
+			height: 50px
+			max-height: 50px
+			background-color: $greencolor
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+			color: #ffffff
+			border: none
+			padding: 21px 47px 18px
+			margin: 0
+
+.footer
+	width: 100%
+	height: 120px
+	&__inner
+		margin-top: 50px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: flex-start
+	&__menu
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+	&__item
+		text-align: right
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+	&__copyrate
+		display: inline-block
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
+		color: #9a9a9a
+		margin-bottom: 29px
+	&__social
+		display: inline-block
+		width: 175px
+		height: 16px
+	&__link
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+		margin-right: 18px
+		font-size: 14px
+		position: relative
+		white-space: nowrap
+	&__after
+		padding-right: 19px
+		&:after
+			content: ''
+			display: inline-block
+			width: 4px
+			height: 1px
+			background-color: $greycolor
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+
+@import '_mediaq.sass'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
