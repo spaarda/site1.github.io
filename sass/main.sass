@@ -1,9 +1,7 @@
 @import '_basic-settings.sass'
 
+//------------------------Common-------------------------------------------------------------
 .header
-	background-image: url(../img/hero-bg.png)
-	background-repeat: no-repeat
-	background-size: cover
 	width: 100%
 	position: relative
 
@@ -11,7 +9,7 @@
 	font-size: 18px
 	font-weight: 700
 	text-transform: uppercase
-	color: #60606e
+	color: $greycolor
 
 .menu
 	display: -webkit-flex
@@ -21,14 +19,15 @@
 	display: flex
 	&__link
 		display: block
-		color: #9a9a9a
 		text-transform: uppercase
 		text-decoration: none
 
 .nav
 	background-color: transparent 
-	padding: 40px 0 0
 	&__wrap
+		padding-top: 32px
+		width: 100%
+		overflow: hidden
 		display: -webkit-flex
 		display: -moz-flex
 		display: -ms-flex
@@ -39,11 +38,49 @@
 		align-items: center
 		
 .top-menu
+	position: relative
+	max-width: 85%
+	width: 85%
+	padding: 8px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: row
+	justify-content: flex-end
+
+	&__link
+		color: $greycolor
+	&__li
+		line-height: 50px
+		white-space: nowrap
+		font-weight: 700
 	&__list
-		display: none
+		transition: all 0.3s
+		transform: translateX(150%)
+		width: 100%
+		margin: 0
+		padding: 0
+		list-style: none
+		position: absolute
+		right: 60px
+		top: 8px
+		background: transparent
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+		justify-content: space-around
+	&__list-active
+		transform: translateX(0%)
+
 	&__blockicon
 		width: 50px
 		height: 50px
+		margin-right: 5px
 		border-radius: 50%
 		box-shadow: 0 0px 15px rgba(0,0,0,0.2)
 		display: -webkit-flex
@@ -53,6 +90,7 @@
 		display: flex
 		align-items: center
 		text-decoration: none 
+		background-color: #fff
 	&__icon
 		display: block
 		margin-left: 10px
@@ -60,6 +98,7 @@
 		height: 1px
 		background-color: #60606e
 		&:after
+			transition: all .3s
 			content: ''
 			display: block
 			width: 23px
@@ -67,116 +106,28 @@
 			margin-top: 12px
 			background-color: #60606e
 		&:before
+			transition: all .3s
 			content: ''
 			display: block
 			width: 31px
 			height: 1px
 			margin-top: -6px
 			background-color: #60606e
-
-.hero
-	width: 100%
-	&__wrap
-		width: 100%
-	&__blocktitle
-		margin: 0 auto
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		flex-direction: column
-		// justify-content: center
-	&__item
-		margin: 0 auto
-		margin-top: 160px
-		color: $greycolor
-		background-color: $greencolor
-		padding: 10px 21px 7px
-		font-size: 18px
-		font-weight: 700
-		text-transform: uppercase
-		display: block
-	&__title
-		margin: 0 auto
-		display: block
-		border: 10px solid $greycolor
-		padding: 22px 35px
-		color: $greycolor
-		font-size: 48px
-		text-transform: uppercase
-		font-weight: 700
-		margin-bottom: 30px
-		white-space: nowrap
-	&__subtitle
-		margin: 0 auto
-		display: block
-		color: $greycolor
-		font-weight: 400
-		font-size: 16px
-		max-width: 537px
-		text-align: center
-
-.history
-	display: block
-	width: 100%
-	&__wrap
-		margin: auto
-		margin-top: 155px
-		width: 100%
-	&__item
-		margin-right: 5%
-		max-width: 458px
-		width: 45%
-		float: left
-		display: inline-block
-	&__img
-		width: 100%
-		height: 100%
-	&__content
-		display: inline-block
-		max-width: 300px
-		width: 45%
-		margin: auto
-		max-width: 558px
-	&__title
-		margin: 29px 0 28px 0
-		font-size: 30px
-		font-weight: 900
-		text-transform: uppercase
-		color: $greycolor
-		position: relative
-		z-index: 1
+	&__icon-active
+		height: 0
+		&:after
+			transition: all .3s
+			margin: 0
+			width: 30px
+			height: 2px
+			transform: rotate(135deg)
+			margin-top: -2px
 		&:before
-			content: ''
-			display: block
-			width: 67px
-			height: 21px
-			background-color: $greencolor
-			position: absolute
-			bottom: -4px
-			left: 0
-			z-index: -1
-	&__text
-		font-size: 16px
-		font-weight: 400
-		color: $greycolor
-		line-height: 30px
-	&__btn
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		justify-content: flex-end
-	&__button
-		color: #fff
-		font-size: 14px
-		font-weight: 700
-		text-transform: uppercase
-		padding: 20px 39px 19px
-		border: none
-		background-color: $greencolor
+			transition: all .3s
+			margin: 0
+			width: 30px
+			height: 2px
+			transform: rotate(-135deg)
 
 .section
 	text-align: center
@@ -218,160 +169,6 @@
 			z-index: -1
 			background-color: $greencolor
 
-.whychoose
-	width: 100%
-	margin: 0 auto
-	&__row
-		width: 100%
-		margin: 0 auto
-	&__title
-		margin: 120px auto 20px
-	&__content
-		width: 100%
-		margin-top: 100px
-		position: relative
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		align-items: flex-end
-		flex-wrap: wrap-reverse
-	&__link
-		text-decoration: none
-		font-size: 14px
-		font-weight: 400
-		text-transform: uppercase
-		color: #999999
-	&__li
-		margin-bottom: 15px
-	&__itemimg
-		margin: 0 auto
-		margin-bottom: 20px
-	&__item
-		margin: 0 auto
-		text-align: left
-		max-width: 600px
-		width: 100%
-		display: inline-block
-		&:last-child
-			margin-left: 70px
-	&__itemtitle
-		margin: 0
-		margin-bottom: 28px
-		font-size: 18px
-		font-weight: 700
-		text-transform: uppercase
-		color: $greycolor
-	&__list
-		margin-top: 0
-		list-style: none
-		margin-bottom: 60px
-		display: inline-block
-		padding-left: 0
-		&:nth-child(odd)
-			margin-right: 80px
-			margin-left: 45px
-
-	&__before1
-		&:before
-			content: url('../img/whychoose-icon1.png')
-			display: block
-			width: 28px
-			height: 28px
-			margin-bottom: 21px
-	&__before2
-		&:before
-			content: url('../img/whychoose-icon2.png')
-			display: block
-			width: 28px
-			height: 28px
-			margin-bottom: 19px
-	&__before3
-		margin-right: 60px
-		&:before
-			content: url('../img/whychoose-icon3.png')
-			display: block
-			width: 28px
-			height: 28px
-			margin-bottom: 19px
-	&__before4
-		&:before
-			content: url('../img/whychoose-icon4.png')
-			display: block
-			width: 28px
-			height: 28px
-			margin-bottom: 21px
-
-.portfolio
-	&__title
-		margin-top: 150px
-	&__subtitle
-		margin-bottom: 100px
-	&__content
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		flex-direction: row
-
-.category
-	width: 100%
-	max-width: 200px
-	text-align: left
-	margin-top: 15px
-	&__title
-		margin: 0
-		margin-bottom: 40px
-		font-size: 30px
-		font-weight: 700
-		text-transform: uppercase
-		color: $greycolor
-	&__listbtn
-		border: none
-		background-color: transparent
-		font-size: 14px
-		font-weight: 700
-		color: $greycolor
-		text-transform: uppercase
-		font-family: Montserrat
-		&:focus
-			outline: none
-	&__list
-		margin: 0
-		padding: 0
-		list-style: none
-		&-active
-			background-color: $greencolor
-			padding: 10px 20px
-			color: #ffffff
-			margin-left: -20px
-	&__li
-		text-align: left
-		margin-bottom: 25px
-	&__content
-		width: 100%
-		max-width: 940px
-		max-height: 1200px
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		flex-flow: column wrap
-		overflow: hidden
-	&__item
-		margin: 15px
-		&:nth-child(3n+1)  
-			order: 1
-		&:nth-child(3n+2) 
-			order: 2
-		&:nth-child(3n)   
-			order: 3
-
 .newsletter
 	width: 100%
 	background-color: $greencolor
@@ -404,7 +201,7 @@
 		width: 51%
 		margin-bottom: 50px
 		background-color: #fff
-		padding: 20px 50px 20px 25px
+		padding: 20px 25px
 	&__formtitle
 		margin: 0
 		margin-bottom: 18px
@@ -503,6 +300,7 @@
 		font-size: 14px
 		position: relative
 		white-space: nowrap
+		color: #9a9a9a
 	&__after
 		padding-right: 19px
 		&:after
@@ -515,7 +313,314 @@
 			right: 0
 			top: 50%
 			transform: translateY(-50%)
+//-----------------------------------------Home-----------------------------------------------------------
 
+.homepage__header
+	background-image: url(../img/hero-bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+
+.hero
+	width: 100%
+	&__wrap
+		width: 100%
+	&__blocktitle
+		margin: 0 auto
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		// justify-content: center
+	&__item
+		margin: 0 auto
+		margin-top: 160px
+		color: $greycolor
+		background-color: $greencolor
+		padding: 10px 21px 7px
+		font-size: 18px
+		font-weight: 700
+		text-transform: uppercase
+		display: block
+	&__title
+		margin: 0 auto
+		display: block
+		border: 10px solid $greycolor
+		padding: 22px 35px
+		color: $greycolor
+		font-size: 48px
+		text-transform: uppercase
+		font-weight: 700
+		margin-bottom: 30px
+		white-space: nowrap
+	&__subtitle
+		margin: 0 auto
+		display: block
+		color: $greycolor
+		font-weight: 400
+		font-size: 16px
+		max-width: 537px
+		text-align: center
+
+.portfolio
+	&__title
+		margin-top: 150px
+	&__subtitle
+		margin-bottom: 100px
+	&__content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+
+.history
+	display: block
+	width: 100%
+	&__wrap
+		margin: auto
+		margin-top: 155px
+		width: 100%
+	&__item
+		margin-right: 5%
+		max-width: 458px
+		width: 45%
+		float: left
+		display: inline-block
+	&__img
+		width: 100%
+		height: 100%
+	&__content
+		display: inline-block
+		max-width: 300px
+		width: 45%
+		margin: auto
+		max-width: 558px
+	&__title
+		margin: 29px 0 28px 0
+		font-size: 30px
+		font-weight: 900
+		text-transform: uppercase
+		color: $greycolor
+		position: relative
+		z-index: 1
+		&:before
+			content: ''
+			display: block
+			width: 67px
+			height: 21px
+			background-color: $greencolor
+			position: absolute
+			bottom: -4px
+			left: 0
+			z-index: -1
+	&__text
+		font-size: 16px
+		font-weight: 400
+		color: $greycolor
+		line-height: 30px
+	&__btn
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: flex-end
+	&__button
+		color: #fff
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		padding: 20px 39px 19px
+		border: none
+		background-color: $greencolor
+
+.category
+	width: 100%
+	max-width: 200px
+	text-align: left
+	margin-top: 15px
+	&__title
+		margin: 0
+		margin-bottom: 40px
+		font-size: 30px
+		font-weight: 700
+		text-transform: uppercase
+		color: $greycolor
+	&__listbtn
+		border: none
+		background-color: transparent
+		font-size: 14px
+		font-weight: 700
+		color: $greycolor
+		text-transform: uppercase
+		font-family: Montserrat
+		&:focus
+			outline: none
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
+		&-active
+			background-color: $greencolor
+			padding: 10px 20px
+			color: #ffffff
+			margin-left: -20px
+	&__li
+		text-align: left
+		margin-bottom: 25px
+	&__content
+		width: 100%
+		max-width: 940px
+		max-height: 1200px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-flow: column wrap
+		overflow: hidden
+	&__item
+		margin: 15px
+		&:nth-child(3n+1)  
+			order: 1
+		&:nth-child(3n+2) 
+			order: 2
+		&:nth-child(3n)   
+			order: 3
+
+.whychoose
+	width: 100%
+	margin: 0 auto
+	&__row
+		width: 100%
+		margin: 0 auto
+	&__title
+		margin: 120px auto 20px
+	&__content
+		width: 100%
+		margin-top: 100px
+		position: relative
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: flex-end
+		flex-wrap: wrap-reverse
+	&__link
+		text-decoration: none
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
+		color: #999999
+	&__li
+		margin-bottom: 15px
+	&__itemimg
+		margin: 0 auto
+		margin-bottom: 20px
+	&__item
+		margin: 0 auto
+		text-align: left
+		max-width: 600px
+		width: 100%
+		display: inline-block
+		&:last-child
+			margin-left: 70px
+	&__itemtitle
+		margin: 0
+		margin-bottom: 28px
+		font-size: 18px
+		font-weight: 700
+		text-transform: uppercase
+		color: $greycolor
+	&__list
+		margin-top: 0
+		list-style: none
+		margin-bottom: 60px
+		display: inline-block
+		padding-left: 0
+		&:nth-child(odd)
+			margin-right: 80px
+			margin-left: 45px
+
+	&__before1
+		&:before
+			content: url('../img/whychoose-icon1.png')
+			display: block
+			width: 28px
+			height: 28px
+			margin-bottom: 21px
+	&__before2
+		&:before
+			content: url('../img/whychoose-icon2.png')
+			display: block
+			width: 28px
+			height: 28px
+			margin-bottom: 19px
+	&__before3
+		margin-right: 60px
+		&:before
+			content: url('../img/whychoose-icon3.png')
+			display: block
+			width: 28px
+			height: 28px
+			margin-bottom: 19px
+	&__before4
+		&:before
+			content: url('../img/whychoose-icon4.png')
+			display: block
+			width: 28px
+			height: 28px
+			margin-bottom: 21px
+
+
+//----------------------------------------Page-------------------------------------------------------------
+
+.page-header
+	height: 500px
+	background-image: url('../img/page-bg.png')
+	background-repeat: no-repeat
+	background-size: cover
+
+.page-hero
+	width: 100%
+	&__wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		height: 400px
+	&__titleblock
+		text-align: center
+	&__title
+		font-size: 36px
+		color: $greycolor
+		font-weight: 700
+		text-transform: uppercase
+		line-height: 48px
+		margin: 0
+	&__subtitle
+		font-size: 14px
+		font-weight: 700
+		line-height: 48px
+		text-transform: uppercase
+		color: $greycolor
+
+//----------------------------------------Contact----------------------------------------------
+
+
+
+
+//---------------------------------------------------------------------------------------------------
 @import '_mediaq.sass'
 
 

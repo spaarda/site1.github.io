@@ -38,3 +38,8 @@ $('.category__listbtn6').on('click', function(){
 	$('.category__item').css('display' , 'none');
 	$('.category__advertising').css('display' , 'block');
 });
+
+$('.top-menu__blockicon').on('click', function(){
+	$('.top-menu__list').toggleClass('top-menu__list-active');
+	$('.top-menu__icon').toggleClass('top-menu__icon-active');
+});
