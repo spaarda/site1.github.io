@@ -43,3 +43,9 @@ $('.top-menu__blockicon').on('click', function(){
 	$('.top-menu__list').toggleClass('top-menu__list-active');
 	$('.top-menu__icon').toggleClass('top-menu__icon-active');
 });
+
+$('.testimonials__slider').slick({
+	dots: true,
+	arrows: false,
+	dotsClass: 'testimonials__dots'
+}); 
