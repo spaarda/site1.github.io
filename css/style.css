@@ -996,21 +996,24 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 50px; }
 
 .contacts__input {
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+
+.contacts__input[placeholder] {
   color: #ccc;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  height: 49px; }
+  height: 49px;
+  opacity: 1;
+  transition: opacity .3s ease; }
 
 .contacts__name {
   width: 47%;
   margin-right: 24px;
-  padding: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1); }
+  padding: 20px; }
 
 .contacts__email {
   width: 47.5%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 20px; }
 
 .contacts__submit {
@@ -1058,6 +1061,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700; }
 
 @media screen and (max-width: 1024px) {
+  .contacts__name {
+    width: 100%;
+    margin-bottom: 30px; }
+  .contacts__email {
+    width: 100%; }
   .newsletter__wrap {
     display: -moz-flex;
     display: -ms-flex;

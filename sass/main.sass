@@ -962,19 +962,21 @@
 		color: #ccc
 		margin-top: 50px
 	&__input
+		border: 1px solid rgba(0, 0, 0, 0.1)
+	&__input[placeholder]
 		color: #ccc
 		font-size: 12px
 		font-weight: 700
 		text-transform: uppercase
 		height: 49px
+		opacity: 1
+		transition: opacity .3s ease
 	&__name
 		width: 47%
 		margin-right: 24px
 		padding: 20px
-		border: 1px solid rgba(0, 0, 0, 0.1)
 	&__email
 		width: 47.5%
-		border: 1px solid rgba(0, 0, 0, 0.1)
 		padding: 20px
 	&__submit
 		display: block
