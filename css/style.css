@@ -719,6 +719,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -o-flex;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center; }
 
@@ -875,7 +876,6 @@ h1, h2, h3, h4, h5, h6 {
   .aboutbar__btn {
     display: block;
     white-space: nowrap;
-    max-width: 20%;
     padding: 21px 38px 18px 40px;
     font-weight: 700; }
 
@@ -1079,6 +1079,16 @@ h1, h2, h3, h4, h5, h6 {
   .container {
     padding: 0;
     width: 90%; }
+  .dteam__content {
+    justify-content: space-around; }
+  .dteam__imgblock {
+    width: 49.5%;
+    margin-bottom: 35px; }
+  .aboutclients__item {
+    width: 49.5%;
+    margin-bottom: 10px; }
+  .benefits__item {
+    width: 49.5%; }
   .footer__menu {
     width: 100%; }
   .footer__inner {
