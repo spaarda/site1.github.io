@@ -44,6 +44,38 @@ $('.top-menu__blockicon').on('click', function(){
 	$('.top-menu__icon').toggleClass('top-menu__icon-active');
 });
 
+
+// SIDEBAR POST BLOCK
+$('.sidebar-posts__btn1').on('click', function(){
+	$(this).addClass('sidebar-posts-active');
+	$('.sidebar-posts__btn2').removeClass('sidebar-posts-active');
+	$('.sidebar-posts__btn3').removeClass('sidebar-posts-active');
+	$('.sidebar-posts__latest').css('opacity', '1');
+	$('.sidebar-posts__popular').css('opacity', '0');
+	$('.sidebar-posts__comments').css('opacity', '0');
+})
+
+$('.sidebar-posts__btn2').on('click', function(){
+	$(this).addClass('sidebar-posts-active');
+	$('.sidebar-posts__btn1').removeClass('sidebar-posts-active');
+	$('.sidebar-posts__btn3').removeClass('sidebar-posts-active');
+	$('.sidebar-posts__latest').css('opacity', '0');
+	$('.sidebar-posts__popular').css('opacity', '1');
+	$('.sidebar-posts__comments').css('opacity', '0');
+})
+
+$('.sidebar-posts__btn3').on('click', function(){
+	$(this).addClass('sidebar-posts-active');
+	$('.sidebar-posts__btn2').removeClass('sidebar-posts-active');
+	$('.sidebar-posts__btn1').removeClass('sidebar-posts-active');
+	$('.sidebar-posts__latest').css('opacity', '0');
+	$('.sidebar-posts__popular').css('opacity', '0');
+	$('.sidebar-posts__comments').css('opacity', '1');
+})
+
+
+
+//   Слайдер
 $('.testimonials__slider').slick({
 	dots: true,
 	arrows: false,

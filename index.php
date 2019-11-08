@@ -9,6 +9,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+<?php 
+	echo "s123";
+ ?>
 <header class="header homepage__header">
 	<nav class="nav">
 		<div class="container">
