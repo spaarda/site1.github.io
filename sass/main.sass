@@ -168,8 +168,16 @@
 .newsletter
 	width: 100%
 	background-color: $greencolor
+	display: block
 	&__wrap
 		padding-top: 50px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+		justify-content: space-between
 	&__blocktitle
 		display: inline-block 
 		vertical-align: top
@@ -254,7 +262,8 @@
 .footer
 	width: 100%
 	height: 120px
-	&__inner
+	display: block
+	&__item
 		margin-top: 50px
 		display: -webkit-flex
 		display: -moz-flex
@@ -271,7 +280,7 @@
 		display: -o-flex
 		display: flex
 		flex-direction: row
-	&__item
+	&__text
 		text-align: right
 		display: -webkit-flex
 		display: -moz-flex
@@ -280,15 +289,24 @@
 		display: flex
 		flex-direction: column
 		align-items: flex-end
+	&__text-item
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: flex-end
 	&__copyrate
-		display: inline-block
+		display: block
 		text-transform: uppercase
 		color: #9a9a9a
 		margin-bottom: 29px
 	&__social
-		display: inline-block
+		display: block
 		width: 175px
 		height: 16px
+		margin-bottom: 29px
 	&__link
 		display: -webkit-flex
 		display: -moz-flex
@@ -1152,7 +1170,194 @@
 			padding: 0
 			margin-bottom: 50px
 
-//---------------------------------------------------------------------------------------------------------
+//-----------------------------------------Blog------------------------------------------------------------
+
+.blog
+	width: 70%
+	display: inline-block
+.sidebar
+	float: right
+	width: 25%
+	&__form
+		margin-top: 150px
+	&__search
+		background-color: #ececec
+		background-image: url('../img/seach_icon.png')
+		font-family: 'Montserrat', sans-serif
+		background-repeat: no-repeat
+		background-size: 15px 15px
+		background-position:  95% 50%
+		border: none
+		width: 100%
+		height: 40px
+		padding: 0 15px
+		position: relative
+	&-posts
+		&__title
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+		&__blockbtn
+		&__btn1
+			background-color: transparent
+			border: none
+			margin: 0
+			padding: 0
+			color: #999
+			font-family: Montserrat
+			font-weight: 700
+			text-transform: uppercase
+			border-bottom: 2px solid #e6e6e6
+			line-height: 48px
+
+		&__btn2
+			background-color: transparent
+			border: none
+			margin: 0
+			padding: 0
+			color: #999
+			font-family: Montserrat
+			font-weight: 700
+			text-transform: uppercase
+			border-bottom: 2px solid #e6e6e6
+			line-height: 48px
+		&__btn3
+			background-color: transparent
+			border: none
+			margin: 0
+			padding: 0
+			color: #999
+			font-family: Montserrat
+			font-weight: 700
+			text-transform: uppercase
+			border-bottom: 2px solid #e6e6e6
+			line-height: 48px
+		&__itemlist
+		&__item
+			width: 100%
+			max-width: 220px
+			margin-bottom: 10px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: row
+			align-items: center
+			&:last-child
+				margin-bottom: 0
+			&:first-child
+				margin-top: 29px
+		&__img
+			display: inline-block
+			width: 80px
+			height: 80px
+		&__text
+			margin-left: 20px
+		&__itemtitle
+			margin: 0
+			font-weight: 700
+			line-height: 18px
+			text-transform: uppercase
+			font-size: 14px
+		&__date
+			color: #9a9a9a
+			font-size: 12px
+			margin-top: 8px
+
+
+
+.post
+	text-align: left
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	margin-bottom: 100px
+	&:first-child
+		margin-top: 150px
+	&__title
+		margin-top: 20px
+		font-size: 18px
+		font-weight: 700
+		text-transform: uppercase
+	&__text
+		line-height: 24px
+		color: #999
+		margin: 0
+	&__link-tofull
+		margin-top: 30px
+		display: flex
+		flex-direction: row
+		align-items: flex-start
+		font-family: 'Montserrat', sans-serif
+		font-weight: 700
+		text-transform: uppercase
+		line-height: 24px
+		&:after
+			content: url('../img/post__arrow.png')
+			display: inline-block
+			height: 8px
+			width: 10px
+			margin-left: 5px
+
+	&__details
+		margin-top: 30px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: row
+
+		&-date
+			margin-right: 14px
+			color: #fff
+			font-weight: 700
+			text-transform: uppercase
+			background-color: $greencolor
+			padding: 9px 20px
+		&-comm
+			margin-right: 20px
+			color: #ccc
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: row
+			align-items: center
+			&:before
+				content: url('../img/comment.png')
+				margin-right: 9px
+				display: inline-block
+				width: 15px
+				height: 16px
+		&-like
+			color: #ccc
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: row
+			align-items: center
+			&:before
+				content: url('../img/like.png')
+				margin-right: 8px
+				display: inline-block
+				width: 15px
+				height: 16px
+	&__img
+		width: 100%
+		max-width: 750px
+		img
+			width: 100%
+			height: 100%
+
+//-----------------------------------------MediaQuery------------------------------------------------------
 @import '_mediaq.sass'
 
 
