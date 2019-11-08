@@ -59,12 +59,12 @@
 	&__list
 		transition: all 0.3s
 		transform: translateX(150%)
-		width: 100%
+		width: 95%
 		margin: 0
 		padding: 0
 		list-style: none
 		position: absolute
-		right: 60px
+		right: 65px
 		top: 8px
 		background: transparent
 		display: -webkit-flex
@@ -1078,6 +1078,79 @@
 		font-size: 18px
 		font-weight: 700
 		text-transform: uppercase
+
+.rates
+	&__wrap
+		width: 100%
+
+	&__corner
+    position: relative
+    display: block
+   	&::after 
+   		content: ''
+   		top: -10px
+   		right: 0
+   		position: absolute
+    	border: 10px solid transparent
+    	border-right: 10px solid $greencolor
+
+	&__content
+		margin: 100px 0 150px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+	&__item
+		width: 30%
+		overflow: hidden
+		border-top: 5px solid $greencolor
+		max-width: 360px
+		text-align: left
+		&:hover
+			box-shadow: 0 0 50px rgba(0, 0, 0, 0.25)
+		&-wrap
+			padding: 35px 32px
+		&-title
+			margin: 0
+			font-size: 30px
+			font-weight: 700
+			text-transform: uppercase
+		&-li
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: row
+			line-height: 36px
+			&:before
+				content: url('../img/option__icon.png')
+				display: block
+				width: 10px	
+				height: 10px
+				margin-right: 10px
+		&-price
+			display: inline-block
+			margin: 17px 0 50px
+			color: #fff
+			background-color: $greencolor
+			padding: 5px 20px
+			text-transform: uppercase
+			font-weight: 700
+		&-btn
+			border: none
+			background-color: $greencolor
+			color: #fff
+			padding: 20px 19px
+		&-list
+			display: block
+			list-style: none
+			margin: 0
+			padding: 0
+			margin-bottom: 50px
 
 //---------------------------------------------------------------------------------------------------------
 @import '_mediaq.sass'

@@ -143,12 +143,12 @@ h1, h2, h3, h4, h5, h6 {
   .top-menu__list {
     transition: all 0.3s;
     transform: translateX(150%);
-    width: 100%;
+    width: 95%;
     margin: 0;
     padding: 0;
     list-style: none;
     position: absolute;
-    right: 60px;
+    right: 65px;
     top: 8px;
     background: transparent;
     display: -moz-flex;
@@ -1130,6 +1130,77 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   text-transform: uppercase; }
 
+.rates__wrap {
+  width: 100%; }
+
+.rates__corner {
+  position: relative;
+  display: block; }
+  .rates__corner::after {
+    content: '';
+    top: -10px;
+    right: 0;
+    position: absolute;
+    border: 10px solid transparent;
+    border-right: 10px solid #7beec7; }
+
+.rates__content {
+  margin: 100px 0 150px;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+
+.rates__item {
+  width: 30%;
+  overflow: hidden;
+  border-top: 5px solid #7beec7;
+  max-width: 360px;
+  text-align: left; }
+  .rates__item:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.25); }
+  .rates__item-wrap {
+    padding: 35px 32px; }
+  .rates__item-title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .rates__item-li {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    line-height: 36px; }
+    .rates__item-li:before {
+      content: url("../img/option__icon.png");
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin-right: 10px; }
+  .rates__item-price {
+    display: inline-block;
+    margin: 17px 0 50px;
+    color: #fff;
+    background-color: #7beec7;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .rates__item-btn {
+    border: none;
+    background-color: #7beec7;
+    color: #fff;
+    padding: 20px 19px; }
+  .rates__item-list {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px; }
+
 @media screen and (max-width: 1024px) {
   .contacts__name {
     width: 100%;
@@ -1174,6 +1245,12 @@ h1, h2, h3, h4, h5, h6 {
   .dteam__imgblock {
     width: 49.5%;
     margin-bottom: 35px; }
+  .rates__content {
+    margin-bottom: 80px; }
+  .rates__item {
+    width: 45%; }
+    .rates__item:last-child {
+      margin: 50px auto 0; }
   .aboutclients__item {
     width: 49.5%;
     margin-bottom: 10px; }
@@ -1199,7 +1276,7 @@ h1, h2, h3, h4, h5, h6 {
       background-color: #9a9a9a;
       margin-bottom: 15px; }
   .footer__social {
-    margin-left: 170px; } }
+    margin-left: 140px; } }
 
 @media screen and (max-width: 425px) {
   .contaimer {
