@@ -60,110 +60,170 @@
 			<input type="search" class="sidebar__input sidebar__search" placeholder="SEARCH...">
 		</form>
 		<div class="sidebar-posts">
-			<h2 class="sidebar-posts__title">Posts</h2>
+			<h2 class="sidebar__title">Posts</h2>
 			<div class="sidebar-posts__blockbtn">
-				<button class="sidebar-posts__btn1">Latest</button>
-				<button class="sidebar-posts__btn2">Popular</button>
-				<button class="sidebar-posts__btn3">Comments</button>
+				<button class="sidebar-posts__btn1 sidebar-posts__button sidebar-posts-active">Latest</button>
+				<button class="sidebar-posts__btn2 sidebar-posts__button">Popular</button>
+				<button class="sidebar-posts__btn3 sidebar-posts__button">Comments</button>
 			</div>
-			<div class="sidebar-posts__itemlist">
-				<div class="sidebar-posts__item">
-					<div class="sidebar-posts__img">
-						<img src="img/blog__posts1.png" alt="post image">
+			<div class="sidebar-posts__content">
+				<div class="sidebar-posts__latest">
+					<div class="sidebar-posts__item">
+						<div class="sidebar-posts__img">
+							<a href="#"><img src="img/blog__posts1.png" alt="post image"></a>
+						</div>
+						<div class="sidebar-posts__text">
+							<h2 class="sidebar-posts__itemtitle"><a href="#">Magna mollis ultricies</a></h2>
+							<span class="sidebar-posts__date"><a href="#">3th oct 2012</a></span>
+						</div>
 					</div>
-					<div class="sidebar-posts__text">
-						<h2 class="sidebar-posts__itemtitle">Magna mollis ultricies</h2>
-						<span class="sidebar-posts__date">3th oct 2012</span>
+					<div class="sidebar-posts__item">
+						<div class="sidebar-posts__img">
+							<a href="#"><img src="img/blog__posts2.png" alt="post image"></a>
+						</div>
+						<div class="sidebar-posts__text">
+							<h2 class="sidebar-posts__itemtitle"><a href="#">Magna mollis ultricies</a></h2>
+							<span class="sidebar-posts__date"><a href="#">3th oct 2012</a></span>
+						</div>
+					</div>
+					<div class="sidebar-posts__item">
+						<div class="sidebar-posts__img">
+							<a href="#"><img src="img/blog__posts3.png" alt="post image"></a>
+						</div>
+						<div class="sidebar-posts__text">
+							<h2 class="sidebar-posts__itemtitle"><a href="#">Magna mollis ultricies</a></h2>
+							<span class="sidebar-posts__date"><a href="#">3th oct 2012</a></span>
+						</div>
 					</div>
 				</div>
-				<div class="sidebar-posts__item">
-					<div class="sidebar-posts__img">
-						<img src="img/blog__posts2.png" alt="post image">
+				<div class="sidebar-posts__popular">
+					<div class="sidebar-posts__item">
+						<div class="sidebar-posts__img">
+							<a href="#"><img src="img/blog__posts2.png" alt="post image"></a>
+						</div>
+						<div class="sidebar-posts__text">
+							<h2 class="sidebar-posts__itemtitle"><a href="#">Magna mollis ultricies</a></h2>
+							<span class="sidebar-posts__date"><a href="#">3th oct 2012</a></span>
+						</div>
 					</div>
-					<div class="sidebar-posts__text">
-						<h2 class="sidebar-posts__itemtitle">Magna mollis ultricies</h2>
-						<span class="sidebar-posts__date">3th oct 2012</span>
+					<div class="sidebar-posts__item">
+						<div class="sidebar-posts__img">
+							<a href="#"><img src="img/blog__posts1.png" alt="post image"></a>
+						</div>
+						<div class="sidebar-posts__text">
+							<h2 class="sidebar-posts__itemtitle"><a href="#">Magna mollis ultricies</a></h2>
+							<span class="sidebar-posts__date"><a href="#">3th oct 2012</a></span>
+						</div>
+					</div>
+					<div class="sidebar-posts__item">
+						<div class="sidebar-posts__img">
+							<a href="#"><img src="img/blog__posts3.png" alt="post image"></a>
+						</div>
+						<div class="sidebar-posts__text">
+							<h2 class="sidebar-posts__itemtitle"><a href="#">Magna mollis ultricies</a></h2>
+							<span class="sidebar-posts__date"><a href="#">3th oct 2012</a></span>
+						</div>
 					</div>
 				</div>
-				<div class="sidebar-posts__item">
-					<div class="sidebar-posts__img">
-						<img src="img/blog__posts3.png" alt="post image">
+				<div class="sidebar-posts__comments">
+					<div class="sidebar-posts__item">
+						<div class="sidebar-posts__img">
+							<a href="#"><img src="img/blog__posts2.png" alt="post image"></a>
+						</div>
+						<div class="sidebar-posts__text">
+							<h2 class="sidebar-posts__itemtitle"><a href="#">Magna mollis ultricies</a></h2>
+							<span class="sidebar-posts__date"><a href="#">3th oct 2012</a></span>
+						</div>
 					</div>
-					<div class="sidebar-posts__text">
-						<h2 class="sidebar-posts__itemtitle">Magna mollis ultricies</h2>
-						<span class="sidebar-posts__date">3th oct 2012</span>
+					<div class="sidebar-posts__item">
+						<div class="sidebar-posts__img">
+							<a href="#"><img src="img/blog__posts3.png" alt="post image"></a>
+						</div>
+						<div class="sidebar-posts__text">
+							<h2 class="sidebar-posts__itemtitle"><a href="#">Magna mollis ultricies</a></h2>
+							<span class="sidebar-posts__date"><a href="#">3th oct 2012</a></span>
+						</div>
+					</div>
+					<div class="sidebar-posts__item">
+						<div class="sidebar-posts__img">
+							<a href="#"><img src="img/blog__posts1.png" alt="post image"></a>
+						</div>
+						<div class="sidebar-posts__text">
+							<h2 class="sidebar-posts__itemtitle"><a href="#">Magna mollis ultricies</a></h2>
+							<span class="sidebar-posts__date"><a href="#">3th oct 2012</a></span>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="sidebar-categories">
-			<h2 class="sidebar-categories__title">Categories</h2>
+			<h2 class="sidebar__title">Categories</h2>
 			<ul class="sidebar-categories__list">
 				<li class="sidebar-categories__li">
-					<span class="sidebar-categories__span"><a href="#">Business</a></span>
-					<span class="sidebar-categories__span"><a href="#">15</a></span>
+					<span><a class="sidebar-categories__link" href="#">Business</a></span>
+					<span><a class="sidebar-categories__link" href="#">15</a></span>
 				</li>
 				<li class="sidebar-categories__li">
-					<span class="sidebar-categories__span"><a href="#">Photography</a></span>
-					<span class="sidebar-categories__span"><a href="#">17</a></span>
+					<span><a class="sidebar-categories__link" href="#">Photography</a></span>
+					<span><a class="sidebar-categories__link" href="#">17</a></span>
 				</li>
 				<li class="sidebar-categories__li">
-					<span class="sidebar-categories__span"><a href="#">Journal</a></span>
-					<span class="sidebar-categories__span"><a href="#">22</a></span>
+					<span><a class="sidebar-categories__link" href="#">Journal</a></span>
+					<span><a class="sidebar-categories__link" href="#">22</a></span>
 				</li>
 				<li class="sidebar-categories__li">
-					<span class="sidebar-categories__span"><a href="#">Web devlopment</a></span>
-					<span class="sidebar-categories__span"><a href="#">30</a></span>
+					<span><a class="sidebar-categories__link" href="#">Web devlopment</a></span>
+					<span><a class="sidebar-categories__link" href="#">30</a></span>
 				</li>
 			</ul>
 		</div>
 		<div class="sidebar-tags">
-			<h2 class="sidebar-tags__title">Tags</h2>
+			<h2 class="sidebar__title">Tags</h2>
 			<div class="sidebar-tags__wrap">
 				<div class="sidebar-tags__item">
-					<a href="#">css</a>
+					<a class="sidebar-tags__link" href="#">css</a>
 				</div>
 				<div class="sidebar-tags__item">
-					<a href="#">javascript</a>
-				</div>
-					<div class="sidebar-tags__item">
-					<a href="#">jquery</a>
+					<a class="sidebar-tags__link" href="#">javascript</a>
 				</div>
 				<div class="sidebar-tags__item">
-					<a href="#">html5</a>
+					<a class="sidebar-tags__link" href="#">jquery</a>
 				</div>
 				<div class="sidebar-tags__item">
-					<a href="#">bootstrap</a>
+					<a class="sidebar-tags__link" href="#">html5</a>
 				</div>
 				<div class="sidebar-tags__item">
-					<a href="#">css</a>
+					<a class="sidebar-tags__link" href="#">bootstrap</a>
 				</div>
 				<div class="sidebar-tags__item">
-					<a href="#">javascript</a>
+					<a class="sidebar-tags__link" href="#">css</a>
 				</div>
 				<div class="sidebar-tags__item">
-					<a href="#">jquery</a>
+					<a class="sidebar-tags__link" href="#">javascript</a>
+				</div>
+				<div class="sidebar-tags__item">
+					<a class="sidebar-tags__link" href="#">jquery</a>
 				</div>
 			</div>
 		</div>
 		<div class="sidebar-archives">
-			<h2 class="sidebar-archives__title">Categories</h2>
+			<h2 class="sidebar__title">Archives</h2>
 			<ul class="sidebar-archives__list">
 				<li class="sidebar-archives__li">
-					<span class="sidebar-archives__span"><a href="#">Business</a></span>
-					<span class="sidebar-archives__span"><a href="#">15</a></span>
+					<span><a class="sidebar-archives__link" href="#">Business</a></span>
+					<span><a class="sidebar-archives__link" href="#">15</a></span>
 				</li>
 				<li class="sidebar-archives__li">
-					<span class="sidebar-archives__span"><a href="#">Photography</a></span>
-					<span class="sidebar-archives__span"><a href="#">17</a></span>
+					<span><a class="sidebar-archives__link" href="#">Photography</a></span>
+					<span><a class="sidebar-archives__link" href="#">17</a></span>
 				</li>
 				<li class="sidebar-archives__li">
-					<span class="sidebar-archives__span"><a href="#">Journal</a></span>
-					<span class="sidebar-archives__span"><a href="#">22</a></span>
+					<span><a class="sidebar-archives__link" href="#">Journal</a></span>
+					<span><a class="sidebar-archives__link" href="#">22</a></span>
 				</li>
 				<li class="sidebar-archives__li">
-					<span class="sidebar-archives__span"><a href="#">Web devlopment</a></span>
-					<span class="sidebar-archives__span"><a href="#">30</a></span>
+					<span><a class="sidebar-archives__link" href="#">Web devlopment</a></span>
+					<span><a class="sidebar-archives__link" href="#">30</a></span>
 				</li>
 			</ul>
 		</div>
